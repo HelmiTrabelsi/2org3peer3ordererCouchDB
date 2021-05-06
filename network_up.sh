@@ -12,9 +12,14 @@ if [ "$LOCAL_VERSION" != "$DOCKER_IMAGE_VERSION" ]; then
   fi
 ./host1up.sh
 ./host2up.sh
+./host3up.sh
+./host4up.sh
+./host5up.sh
+./host9up.sh
 ./host6up.sh
 ./host7up.sh
 ./host8up.sh
+
 #. organizations/fabric-ca/registerEnroll1.sh
 #createOrg1
 

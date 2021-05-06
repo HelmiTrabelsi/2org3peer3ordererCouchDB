@@ -76,6 +76,8 @@ function createOrg1() {
   mkdir -p organizations/peerOrganizations/org1.example.com/users
   mkdir -p organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com
 
+
+  
   infoln "Generate the user msp"
   set -x
   fabric-ca-client enroll -u https://user1:user1pw@localhost:7054 --caname ca-org1 -M ${PWD}/organizations/peerOrganizations/org1.example.com/users/User1@org1.example.com/msp --tls.certfiles ${PWD}/organizations/fabric-ca/org1/tls-cert.pem
