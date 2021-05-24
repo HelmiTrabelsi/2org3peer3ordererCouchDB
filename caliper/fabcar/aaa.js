@@ -50,6 +50,14 @@ class CreateCarWorkload extends WorkloadModuleBase {
         carNumber = 'Client' + this.workerIndex + '_CAR' + this.txIndex.toString();
         var s = carNumber.slice(-1)
 
+        //######### 10% MVCC Conflict         
+        if (s == 2 ) {
+            carNumber = 'Client' + this.workerIndex + '_CAR1';
+        }
+        else {
+            carNumber = 'Client' + this.workerIndex + '_CAR' + this.txIndex.toString();
+        }
+/*
         //######### 20% MVCC Conflict         
         if (s == 2 || s == 3) {
             carNumber = 'Client' + this.workerIndex + '_CAR1';
@@ -57,6 +65,7 @@ class CreateCarWorkload extends WorkloadModuleBase {
         else {
             carNumber = 'Client' + this.workerIndex + '_CAR' + this.txIndex.toString();
         }
+*/
 
         /*
         //######### 40% MVCC Conflict         

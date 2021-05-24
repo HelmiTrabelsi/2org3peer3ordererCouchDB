@@ -134,6 +134,7 @@
             <ul>
                 <h3>&nbspBenchmark results</h3>
                 <li><a href="#benchmarksummary">Summary</a></li>
+                    <li><a href="#Create Car.">Create Car.</a></li>
                     <li><a href="#change Car Owner.">change Car Owner.</a></li>
             </ul>
             <ul>
@@ -157,17 +158,40 @@
                     </tr>
 
                     <tr>
-                         <td>change Car Owner.</td> <td>0</td> <td>500</td> <td>50.2</td> <td>0.00</td> <td>9007199254740.99</td> <td>-</td> <td>50.1</td>
+                         <td>Create Car.</td> <td>5000</td> <td>0</td> <td>23.5</td> <td>19.93</td> <td>0.40</td> <td>5.22</td> <td>22.9</td>
+                    </tr>
+                    <tr>
+                         <td>change Car Owner.</td> <td>4382</td> <td>618</td> <td>5.6</td> <td>56.00</td> <td>0.74</td> <td>10.32</td> <td>5.6</td>
                     </tr>
                 </table>
             </div>
+            <div style="border-bottom: 1px solid #d9d9d9; padding-bottom: 10px;" id="Create Car.">
+                <h2>Benchmark round: Create Car.</h2>
+                <p></p>
+                <pre style="overflow: visible;white-space: pre-wrap;max-height:100%;">rateControl:
+  type: fixed-rate
+  opts:
+    tps: 300
+</pre>
+                        <h3>Performance metrics for Create Car.</h3>
+                            <table style="min-width: 100%;">
+                                <tr>
+                                     <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
+                                </tr>
+                                <tr>
+                                     <td>Create Car.</td> <td>5000</td> <td>0</td> <td>23.5</td> <td>19.93</td> <td>0.40</td> <td>5.22</td> <td>22.9</td>
+                                </tr>
+                            </table>
+                        <h3>Resource utilization for Create Car.</h3>
+            </div>
+
             <div style="border-bottom: 1px solid #d9d9d9; padding-bottom: 10px;" id="change Car Owner.">
                 <h2>Benchmark round: change Car Owner.</h2>
                 <p></p>
                 <pre style="overflow: visible;white-space: pre-wrap;max-height:100%;">rateControl:
   type: fixed-rate
   opts:
-    tps: 50
+    tps: 300
 </pre>
                         <h3>Performance metrics for change Car Owner.</h3>
                             <table style="min-width: 100%;">
@@ -175,7 +199,7 @@
                                      <th>Name</th> <th>Succ</th> <th>Fail</th> <th>Send Rate (TPS)</th> <th>Max Latency (s)</th> <th>Min Latency (s)</th> <th>Avg Latency (s)</th> <th>Throughput (TPS)</th>
                                 </tr>
                                 <tr>
-                                     <td>change Car Owner.</td> <td>0</td> <td>500</td> <td>50.2</td> <td>0.00</td> <td>9007199254740.99</td> <td>-</td> <td>50.1</td>
+                                     <td>change Car Owner.</td> <td>4382</td> <td>618</td> <td>5.6</td> <td>56.00</td> <td>0.74</td> <td>10.32</td> <td>5.6</td>
                                 </tr>
                             </table>
                         <h3>Resource utilization for change Car Owner.</h3>
@@ -189,23 +213,23 @@
   number: 1
 rounds:
   - label: Create Car.
-    txNumber: 500
+    txNumber: 5000
     rateControl:
       type: fixed-rate
       opts:
-        tps: 50
+        tps: 300
     workload:
       module: caliper&#x2F;fabcar&#x2F;createCar.js
   - label: change Car Owner.
-    txNumber: 500
+    txNumber: 5000
     rateControl:
       type: fixed-rate
       opts:
-        tps: 50
+        tps: 300
     workload:
       module: caliper&#x2F;fabcar&#x2F;aaa.js
       arguments:
-        assets: 500
+        assets: 5000
 </pre>
                 <h3>SUT</h3>
                 <pre id="sutdetails">not provided</pre>
